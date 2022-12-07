@@ -1,0 +1,8 @@
+.bodyContainer {
+    display: flex;
+}
+
+.operatorsContainer {
+    display: flex;
+    flex-direction: column;
+}
