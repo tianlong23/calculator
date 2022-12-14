@@ -1,8 +1,158 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1C1C1C;
+}
+
+.mainContainer {
+    width: 225px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+}
+
+.displayCaseContainer {
+    margin-top: auto;
+}
+
 .bodyContainer {
     display: flex;
+}
+
+
+.displayContainer {
+    color: white;
+    text-align: right;
+    padding-right: 16%;
+    font-size: 30px;
 }
 
 .operatorsContainer {
     display: flex;
     flex-direction: column;
+    margin-left: 4px;
+    justify-content: space-between;
+}
+
+button {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.number {
+    color: white;
+    background-color: #505050;
+    border: none;
+}
+
+.clearHighlight {
+    animation-name: clearClick;
+    animation-duration: .35s;
+}
+
+#equalAction {
+    color: white;
+    background-color: #FF9500;
+    border: none;
+    margin: 2px;
+    font-size: 18px;
+    animation-name: equalActionHighlight;
+    animation-duration: .35s;
+}
+
+@keyframes equalActionHighlight {
+    
+    from{background-color: #f9ddb6};
+    to {background-color: #FF9500;}
+}
+
+
+@keyframes clearClick {
+    from{background-color: #ffffff}
+    to{background-color: #D4D4D2}
+}
+
+.numberHighlight {
+    animation-name: numberClick;
+    animation-duration: .35s;
+}
+
+
+@keyframes numberClick {
+    from{background-color: #868686}
+    to{background-color: #505050}
+}
+
+.action {
+    color: white;
+    background-color: #FF9500;
+    border: none;
+    margin: 2px;
+    font-size: 18px;
+    animation-name: standardTransition;
+    animation-fill-mode: forwards;
+    animation-duration: .35s;
+}
+
+@keyframes standardTransition {
+    from {background-color: white; color: #FF9500;};
+    to {color: white; background-color: #FF9500;}
+}
+
+/*need to figure out how to fix equal sign being dumb*/
+
+#equals {
+    color: white;
+    background-color: #FF9500;
+    border: none;
+    margin: 2px;
+    font-size: 18px;
+}
+
+.highlight {
+    animation-name: highlightTransition;
+    animation-fill-mode: forwards;
+    animation-duration: .35s;
+
+}
+
+@keyframes highlightTransition {
+    from {}
+    to {background-color: white; color: #FF9500;}
+}
+
+.lowest {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#zero {
+    flex-grow: 1;
+      position: relative;
+      -moz-border-radius: 44px;
+      -webkit-border-radius: 44px;
+      border-radius: 44px;
+      text-align: left;
+      padding-left: 19px;
+      margin-right: 7px;
+}
+
+.clearContainer {
+    display: flex;
+    margin-bottom: 1px;
+}
+
+#clear {
+    flex-grow: 1;
+    position: relative;
+      -moz-border-radius: 44px;
+      -webkit-border-radius: 44px;
+      border-radius: 44px;
+      background-color: #D4D4D2;
+      border: none;
+      text-align: left;
+      padding-left: 15px;
 }
